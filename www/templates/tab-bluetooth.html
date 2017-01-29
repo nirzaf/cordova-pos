@@ -1,0 +1,18 @@
+<ion-view view-title="Bluetooth">
+  <ion-content>
+    <ion-refresher pulling-text="refresh" on-refresh="refresh()">
+    </ion-refresher>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="device in bluetoothDevices" type="item-text-wrap" href="#/tab/bluetooth/{{device.id}}">
+        <i class="icon ion-bluetooth"></i>
+        <h2>{{device.name}}</h2>
+        <p>{{device.id}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

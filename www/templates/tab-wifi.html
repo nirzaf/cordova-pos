@@ -1,0 +1,17 @@
+<ion-view view-title="Wi-Fi">
+  <ion-content class="padding">
+    <div class="list list-inset">
+      <label class="item item-input">
+              <input type="text" placeholder="Ip Address" ng-model="ip">
+            </label>
+      <label class="item item-input">
+              <input type="number" placeholder="Port(default is 9100)" ng-model="port">
+            </label>
+    </div>
+    <button class="button button-block button-positive" ng-click="connect(ip,port)">Connect</button>
+    <button class="button button-block button-positive" ng-click="disconnect()">Disconnect</button>
+    <button class="button button-block button-positive" ng-click="print()">Print Content</button>
+    <button class="button button-block button-positive" ng-click="printEscCommand()">Print EscCommand</button>
+    <button class="button button-block button-positive" ng-click="printTscCommand()">Print TscCommand</button>
+  </ion-content>
+</ion-view>
