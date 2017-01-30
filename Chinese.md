@@ -1,16 +1,14 @@
-# cordova-posprinter-sample [中文](Chinese.md)
+# cordova-posprinter-sample
 
+这个例子演示如何使用Epson ESC / POS打印机命令打印到网络、USB和蓝牙连接的收据打印机。
 
-This example demonstrates how to print to network, USB and Bluetooth connected receipt printers using the Epson ESC/POS printer control language.
+## 如何使用
 
-
-## How to use
-
-* Install the Cordova and Ionic: ``` npm install -g cordova ionic ```
-* Add IOS project: ``` cordova platform add ios ``` 
-* Add Android project: ``` cordova platform add android ``` 
-* Build and Run IOS project: ``` cordova run ios  / ionic run ios -l -c ``` 
-* Build and Run Android project: ``` cordova run andorid  / ionic run andorid -l -c ``` 
+* 安装Cordova和Ionic: ``` npm install -g cordova ionic ```
+* 添加IOS项目: ``` cordova platform add ios ``` 
+* 添加Android项目: ``` cordova platform add android ``` 
+* 编译和运行IOS项目: ``` cordova run ios  / ionic run ios -l -c ``` 
+* 编译和运行Android项目: ``` cordova run andorid  / ionic run andorid -l -c ``` 
 
 ## Resources
 
