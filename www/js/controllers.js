@@ -2,8 +2,8 @@
 
   .controller('WiFiCtrl', function ($scope) {
     var socketId = null;
-    $scope.ip = "192.168.1.103";
-    $scope.port = 9100;
+    $scope.ip = "";
+    $scope.port = null;
     function print(socketId, content) {
       if (socketId == null) {
         return;
@@ -166,9 +166,9 @@
           var inEndpoint = null;
           var outEndpoint = null;
           for (var index = 0; index < interfaceDescriptors.length; index++) {
-              var interface = interfaceDescriptors[index];
-              for (var i = 0; i < interface.endpoints.length; i++) {
-                  var endpointDescriptor = interface.endpoints[i];
+            var interface = interfaceDescriptors[index];
+            for (var i = 0; i < interface.endpoints.length; i++) {
+              var endpointDescriptor = interface.endpoints[i];
               if (endpointDescriptor.type == "bulk") {
                 if (endpointDescriptor.direction == "out") {
                   outEndpoint = endpointDescriptor;
@@ -177,17 +177,17 @@
                 }
               }
               if (inEndpoint != null && outEndpoint != null) {
-                  $window.chrome.usb.claimInterface(handle, interface.interfaceNumber, function () {
-                    $window.chrome.usb.bulkTransfer(handle, {
-                        direction: "out",
-                        endpoint: outEndpoint.address,
-                        data: uint8array.buffer
-                    }, function (info) {
-                        console.log(angular.toJson(info));
-                        $window.chrome.usb.releaseInterface(handle, interface.interfaceNumber, function () {
-                        });
+                $window.chrome.usb.claimInterface(handle, interface.interfaceNumber, function () {
+                  $window.chrome.usb.bulkTransfer(handle, {
+                    direction: "out",
+                    endpoint: outEndpoint.address,
+                    data: uint8array.buffer
+                  }, function (info) {
+                    console.log(angular.toJson(info));
+                    $window.chrome.usb.releaseInterface(handle, interface.interfaceNumber, function () {
                     });
                   });
+                });
               }
             }
           }
