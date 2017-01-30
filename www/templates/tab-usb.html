@@ -1,9 +1,15 @@
 <ion-view view-title="USB(Android Only)">
   <ion-content>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+      <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="device in devices" type="item-text-wrap">
+        <i class="icon ion-usb"></i>
+        <h2>{{device.productName}}</h2>
+        <p>{{device.device}}</p>
+        <i class="icon ion-chevron-left icon-accessory"></i>
+        <ion-option-button class="button-positive" ng-click="print(device)">
+          Print
+        </ion-option-button>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
