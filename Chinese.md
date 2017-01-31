@@ -20,6 +20,8 @@ Socket-TCP(cordova plugin) - [https://github.com/MobileChromeApps/cordova-plugin
 
 Bluetooth low energy(cordova plugin) - [https://github.com/don/cordova-plugin-ble-central](https://github.com/don/cordova-plugin-ble-central)
 
+Bluetooth low energy(cordova plugin) - [https://github.com/randdusing/cordova-plugin-bluetoothle](https://github.com/randdusing/cordova-plugin-bluetoothle)
+
 Bluetooth(cordova plugin) - [https://github.com/don/BluetoothSerial](https://github.com/don/BluetoothSerial)
 
 USB(cordova plugin) - [https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-usb](https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-usb)
