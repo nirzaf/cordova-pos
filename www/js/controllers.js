@@ -42,13 +42,13 @@
     }
     $scope.printEscCommand = function () {
       var escCommand = Esc.InitializePrinter +
-        Esc.TextAlignRight + "HelloWorld!" +
-        Esc.TextAlignCenter + "HelloWorld!" +
-        Esc.TextAlignLeft + "HelloWorld!" +
-        Esc.BoldOn + "HelloWorld" + Esc.BoldOff +
-        Esc.DoubleHeight + "HelloWorld!" + Esc.DoubleOff +
-        Esc.DoubleWidth + "HelloWorld!" + Esc.DoubleOff +
-        Esc.DoubleOn + "HelloWorld!" + Esc.DoubleOff +
+        Esc.TextAlignRight + "HelloWorld!\n" +
+        Esc.TextAlignCenter + "HelloWorld!\n" +
+        Esc.TextAlignLeft + "HelloWorld!\n" +
+        Esc.BoldOn + "HelloWorld!\n" + Esc.BoldOff +
+        Esc.DoubleHeight + "HelloWorld!\n" + Esc.DoubleOff +
+        Esc.DoubleWidth + "HelloWorld!\n" + Esc.DoubleOff +
+        Esc.DoubleOn + "HelloWorld!\n" + Esc.DoubleOff +
         PrintAndFeedMaxLine;
       print(socketId, escCommand);
     }
@@ -101,18 +101,18 @@
       bluetooth.write(uint8array.buffer, $scope.deviceId);
     }
     $scope.print = function () {
-      var content = "HelloWorld!";
+      var content = "HelloWorld!\n";
       print(content);
     }
     $scope.printEscCommand = function () {
       var escCommand = Esc.InitializePrinter +
-        Esc.TextAlignRight + "HelloWorld!" +
-        Esc.TextAlignCenter + "HelloWorld!" +
-        Esc.TextAlignLeft + "HelloWorld!" +
-        Esc.BoldOn + "HelloWorld" + Esc.BoldOff +
-        Esc.DoubleHeight + "HelloWorld!" + Esc.DoubleOff +
-        Esc.DoubleWidth + "HelloWorld!" + Esc.DoubleOff +
-        Esc.DoubleOn + "HelloWorld!" + Esc.DoubleOff +
+        Esc.TextAlignRight + "HelloWorld!\n" +
+        Esc.TextAlignCenter + "HelloWorld!\n" +
+        Esc.TextAlignLeft + "HelloWorld!\n" +
+        Esc.BoldOn + "HelloWorld!\n" + Esc.BoldOff +
+        Esc.DoubleHeight + "HelloWorld!\n" + Esc.DoubleOff +
+        Esc.DoubleWidth + "HelloWorld!\n" + Esc.DoubleOff +
+        Esc.DoubleOn + "HelloWorld!\n" + Esc.DoubleOff +
         Esc.PrintAndFeedMaxLine + Esc.CutAndFeedLine();
       print(escCommand);
     }
