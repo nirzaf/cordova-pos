@@ -49,7 +49,7 @@
         Esc.DoubleHeight + "HelloWorld!\n" + Esc.DoubleOff +
         Esc.DoubleWidth + "HelloWorld!\n" + Esc.DoubleOff +
         Esc.DoubleOn + "HelloWorld!\n" + Esc.DoubleOff +
-        PrintAndFeedMaxLine;
+        Esc.PrintAndFeedMaxLine;
       print(socketId, escCommand);
     }
     $scope.printTscCommand = function () {
